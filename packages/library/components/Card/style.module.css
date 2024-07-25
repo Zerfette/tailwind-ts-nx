@@ -1,0 +1,11 @@
+.card {
+  @apply overflow-hidden rounded-lg
+}
+
+.basic {
+  @apply shadow
+}
+
+.outline {
+  @apply border
+}

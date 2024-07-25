@@ -1,0 +1,3 @@
+.simple {
+  @apply text-left border-b border-gray-200 pb-5
+}

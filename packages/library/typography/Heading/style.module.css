@@ -1,0 +1,27 @@
+.h {
+    @apply tracking-tight dark:text-white
+}
+
+.h1 {
+    @apply text-3xl sm:text-5xl font-extrabold 
+}
+
+.h2 {
+    @apply text-xl sm:text-3xl font-bold
+}
+
+.h3 {
+    @apply text-base sm:text-2xl font-semibold
+}
+
+.h4 {
+    @apply text-sm sm:text-lg font-semibold
+}
+
+.h5 {
+    @apply text-xs sm:text-base font-medium
+}
+
+.h6 {
+    @apply text-xs sm:text-base font-medium
+}

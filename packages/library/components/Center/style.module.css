@@ -1,0 +1,4 @@
+.center {
+  @apply flex items-center justify-center;
+  @apply w-full h-full;
+}

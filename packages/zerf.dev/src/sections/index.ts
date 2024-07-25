@@ -1,0 +1,5 @@
+export { Articles } from './Articles'
+export { Projects } from './Projects'
+export { Socials } from './Socials'
+export { Talks } from './Talks'
+export { TopBanner } from './TopBanner'

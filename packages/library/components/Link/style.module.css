@@ -1,0 +1,11 @@
+.link {
+  @apply hover:underline
+}
+
+.basic {
+  @apply hover:bg-transparent
+}
+
+.button {
+  @apply hover:bg-gray-50
+}

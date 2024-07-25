@@ -1,0 +1,11 @@
+.divide {
+  @apply divide-gray-200;
+}
+
+.x {
+  @apply flex divide-x;
+}
+
+.y {
+  @apply divide-y;
+}
