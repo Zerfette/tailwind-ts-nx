@@ -8,7 +8,7 @@ import {
   Link,
   SectionHeading,
 } from 'library/components'
-import { Heading } from 'library/typography'
+import { H } from 'library/typography'
 import { projects } from './model'
 import classes from './style.module.css'
 import { Project } from './types'
@@ -20,7 +20,7 @@ const toProject = ({
   website,
 }: Project) => (
   <li key={title}>
-    <Card variant="basic" className="m-6">
+    <Card variant="with-shadow" className="m-6">
       <Divide variant="y">
         <Center className="flex flex-row-reverse sm:flex-col">
           <img
@@ -28,9 +28,9 @@ const toProject = ({
             src={imgSrc}
             className="m-4 h-8 sm:mx-auto sm:h-24"
           />
-          <Heading level="h3" className="text-center m-4">
+          <H level="h3" className="text-center m-4">
             {title}
-          </Heading>
+          </H>
         </Center>
         <Divide variant="x">
           <Link
@@ -44,7 +44,7 @@ const toProject = ({
                 src="github-mark.svg"
                 className="w-4 sm:w-5 mr-2"
               />
-              <Heading level="h4">GitHub</Heading>
+              <H level="h4">Repo</H>
             </Center>
           </Link>
           <Link
@@ -58,9 +58,9 @@ const toProject = ({
                 icon={faGlobe}
                 className="mr-2 w-4 sm:w-5"
               />
-              <Heading level="h4" className="mr-2">
-                Website
-              </Heading>
+              <H level="h4" className="mr-2">
+                Site
+              </H>
             </Center>
           </Link>
         </Divide>
@@ -76,7 +76,7 @@ export const Projects = () => (
       className="mt-12"
       id="projects"
     >
-      <Heading level="h3">Projects</Heading>
+      <H level="h3">Projects</H>
     </SectionHeading>
     <ul role="list" className={classes.list}>
       {map(toProject)(projects)}

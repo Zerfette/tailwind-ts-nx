@@ -1,10 +1,8 @@
-import { HTMLAttributes } from 'react'
 import { z } from 'zod'
+import { HTMLAttributes } from 'react'
 
-export const variants: [string, ...string[]] = ['with-shadow', 'with-outline']
-
+const variants: [string, ...string[]] = ['base']
 export const Variant = z.enum(variants)
-type Variant = typeof Variant
 
 export const Props = z.object({ variant: Variant })
 export type Props = HTMLAttributes<HTMLDivElement> &

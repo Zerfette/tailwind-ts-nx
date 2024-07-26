@@ -3,8 +3,8 @@ import { FC, PropsWithChildren } from 'react'
 import { Level, type Props } from './schema'
 import classes from './style.module.css'
 
-type Heading = FC<PropsWithChildren<Props>>
-export const Heading: Heading = ({
+type H = FC<PropsWithChildren<Props>>
+export const H: H = ({
   children,
   className,
   level,

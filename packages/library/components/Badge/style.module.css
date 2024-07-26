@@ -1,0 +1,7 @@
+.base {
+  @apply inline-flex items-center  bg-gray-100 px-2 py-1 text-gray-600;
+}
+
+.flat {
+  @apply rounded-md;
+}

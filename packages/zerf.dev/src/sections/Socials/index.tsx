@@ -4,7 +4,7 @@ import {
   Divide,
   Link,
 } from 'library/components'
-import { Heading } from 'library/typography'
+import { H } from 'library/typography'
 import { map } from 'fp-ts/lib/Array'
 import { socials } from './model'
 import { type Social } from './types'
@@ -18,9 +18,9 @@ const toButton = ({ href, title }: Social) => (
     className="w-24 sm:w-36"
   >
     <Center className="p-2 sm:p-4">
-      <Heading level="h4" className="mr-2">
+      <H level="h4" className="mr-2">
         {title}
-      </Heading>
+      </H>
     </Center>
   </Link>
 )

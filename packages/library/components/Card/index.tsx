@@ -12,7 +12,7 @@ export const Card: Card = ({
 }) => {
   const variants = useVariants(classes, Variant, variant)
   return (
-    <div className={cn(className, classes.card, variants)}>
+    <div className={cn(className, classes.base, variants)}>
       {children}
     </div>
   )

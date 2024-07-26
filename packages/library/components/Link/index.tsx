@@ -18,7 +18,7 @@ export const Link: Link = ({
     <a
       href={href}
       target={target}
-      className={cn(className, classes.link, variants)}
+      className={cn(className, classes.base, variants)}
     >
       {children}
     </a>

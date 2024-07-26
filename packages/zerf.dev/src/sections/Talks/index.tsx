@@ -1,45 +1,53 @@
-import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { map } from 'fp-ts/lib/Array'
 import {
-  Card,
+  Badge,
   Center,
+  Card,
   Divide,
   Link,
   SectionHeading,
 } from 'library/components'
-import { Heading } from 'library/typography'
+import { H, P } from 'library/typography'
 import { talks } from './model'
 import classes from './style.module.css'
 import { Talk } from './types'
 
 const toTalk = ({ title, description, video }: Talk) => (
   <li key={title}>
-    <Card variant="basic" className="m-6">
-      <Divide variant="y">
-        {video ? (
-          <Link
-            target="_blank"
-            href={video}
-            className={classes.header}
-            variant="button"
-          >
-            <Center>
-              <Heading level="h3" className="m-4">
+    <Card variant="with-shadow" className="m-6">
+      {video ? (
+        <Divide variant="y">
+          <Center className="flex-col sm:flex-row p-2">
+            <Link
+              target="_blank"
+              href={video}
+              variant="basic"
+            >
+              <H
+                level="h3"
+                className="text-center m-2"
+              >
                 {title}
-              </Heading>
-              <FontAwesomeIcon
-                icon={faArrowUpRightFromSquare}
-              />
-            </Center>
-          </Link>
-        ) : (
-          <Heading level="h3" className="text-center m-4">
+              </H>
+            </Link>
+            <Badge variant="flat" className='m-2"'>
+              YouTube
+            </Badge>
+          </Center>
+          <P variant="base" className="p-8">
+            {description}
+          </P>
+        </Divide>
+      ) : (
+        <Divide variant="y">
+          <H level="h3" className="text-center m-2 sm:m-4">
             {title}
-          </Heading>
-        )}
-        <p className="p-8"> {description}</p>
-      </Divide>
+          </H>
+          <P variant="base" className="p-8">
+            {description}
+          </P>
+        </Divide>
+      )}
     </Card>
   </li>
 )
@@ -51,7 +59,7 @@ export const Talks = () => (
       className="mt-12"
       id="talks"
     >
-      <Heading level="h3">Talks</Heading>
+      <H level="h3">Talks</H>
     </SectionHeading>
     <ul role="list" className={classes.list}>
       {map(toTalk)(talks)}

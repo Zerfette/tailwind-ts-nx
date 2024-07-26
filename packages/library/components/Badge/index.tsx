@@ -3,19 +3,18 @@ import { useVariants } from 'core/hooks'
 import { FC, PropsWithChildren } from 'react'
 import { Variant, type Props } from './schema'
 import classes from './style.module.css'
+import { P } from '../../typography/P'
 
-type Divide = FC<PropsWithChildren<Props>>
-export const Divide: Divide = ({
+type Badge = FC<PropsWithChildren<Props>>
+export const Badge: Badge = ({
   children,
   className,
   variant,
 }) => {
   const variants = useVariants(classes, Variant, variant)
   return (
-    <div
-      className={cn(className, classes.base, variants)}
-    >
-      {children}
-    </div>
+    <span className={cn(className, classes.base, variants)}>
+      <P variant="base">{children}</P>
+    </span>
   )
 }

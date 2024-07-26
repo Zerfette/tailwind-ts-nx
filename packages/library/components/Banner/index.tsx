@@ -13,7 +13,7 @@ export const Banner: Banner = ({
   const variants = useVariants(classes, Variant, variant)
   return (
     <div
-      className={cn(className, classes.banner, variants)}
+      className={cn(className, classes.base, variants)}
     >
       {children}
     </div>

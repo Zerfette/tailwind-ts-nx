@@ -1,7 +1,9 @@
 import { HTMLAttributes } from 'react'
 import { z } from 'zod'
 
-export const variants: [string, ...string[]] = ['with-shadow', 'with-outline']
+export const variants: [string, ...string[]] = [
+  'flat'
+]
 
 export const Variant = z.enum(variants)
 type Variant = typeof Variant

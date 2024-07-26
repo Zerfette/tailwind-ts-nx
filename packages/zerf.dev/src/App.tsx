@@ -1,5 +1,5 @@
 import { Header } from 'library/components'
-import { Heading } from 'library/typography'
+import { H } from 'library/typography'
 import {
   TopBanner,
   Articles,
@@ -14,11 +14,11 @@ const App = () => {
       <TopBanner />
       <div className="p-6 sm:p-12">
         <Header variant="simple">
-          <Heading level="h1">Sarah Renfro</Heading>
-          <Heading level="h2" className="my-6 max-w-lg">
+          <H level="h1">Sarah Renfro</H>
+          <H level="h2" className="my-6 max-w-lg">
             Elevating User Experience with Precision and
             Creativity
-          </Heading>
+          </H>
         </Header>
         <Socials />
         <Projects />

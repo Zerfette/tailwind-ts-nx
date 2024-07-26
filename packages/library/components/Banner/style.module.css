@@ -1,4 +1,4 @@
-.banner {
+.base {
   @apply px-6 py-2.5;
   @apply sm:px-3.5;
 }

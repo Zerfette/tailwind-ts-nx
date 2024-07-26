@@ -9,7 +9,7 @@ export const Center: Center = ({
   className,
 }) => {
   return (
-    <div className={cn(className, classes.center)}>
+    <div className={cn(classes.base, className)}>
       {children}
     </div>
   )
