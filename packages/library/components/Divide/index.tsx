@@ -1,20 +1,17 @@
 import cn from 'classnames'
 import { useVariants } from 'core/hooks'
-import { FC, PropsWithChildren } from 'react'
+import { ReactFC } from '../../types'
 import { Variant, type Props } from './schema'
 import classes from './style.module.css'
 
-type Divide = FC<PropsWithChildren<Props>>
-export const Divide: Divide = ({
+export const Divide: ReactFC<Props> = ({
   children,
   className,
   variant,
 }) => {
   const variants = useVariants(classes, Variant, variant)
   return (
-    <div
-      className={cn(className, classes.base, variants)}
-    >
+    <div className={cn(className, classes.base, variants)}>
       {children}
     </div>
   )

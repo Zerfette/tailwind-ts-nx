@@ -1,16 +1,12 @@
 import cn from 'classnames'
-import { FC, PropsWithChildren } from 'react'
-import { type Props } from './schema'
+import { ReactFC } from '../../types'
 import classes from './style.module.css'
 
-type Center = FC<PropsWithChildren<Props>>
-export const Center: Center = ({
+export const Center: ReactFC<{}> = ({
   children,
   className,
-}) => {
-  return (
-    <div className={cn(classes.base, className)}>
-      {children}
-    </div>
-  )
-}
+}) => (
+  <div className={cn(classes.base, className)}>
+    {children}
+  </div>
+)

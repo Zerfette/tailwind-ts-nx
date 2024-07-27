@@ -1,11 +1,10 @@
 import cn from 'classnames'
 import { useVariants } from 'core/hooks'
-import { FC, PropsWithChildren } from 'react'
+import { ReactFC } from '../../types'
 import { Variant, type Props } from './schema'
 import classes from './style.module.css'
 
-type SectionHeading = FC<PropsWithChildren<Props>>
-export const SectionHeading: SectionHeading = ({
+export const SectionHeading: ReactFC<Props> = ({
   children,
   className,
   variant,

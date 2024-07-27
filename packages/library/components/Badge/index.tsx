@@ -1,12 +1,11 @@
 import cn from 'classnames'
 import { useVariants } from 'core/hooks'
-import { FC, PropsWithChildren } from 'react'
 import { Variant, type Props } from './schema'
 import classes from './style.module.css'
 import { P } from '../../typography/P'
+import { ReactFC } from '../../types'
 
-type Badge = FC<PropsWithChildren<Props>>
-export const Badge: Badge = ({
+export const Badge: ReactFC<Props> = ({
   children,
   className,
   variant,

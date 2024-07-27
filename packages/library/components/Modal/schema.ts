@@ -1,9 +1,14 @@
+import { type Disclosure } from 'core/hooks'
 import { z } from 'zod'
 
 export const variants: [string, ...string[]] = [
-  'with-shadow',
-  'with-outline',
+  'backdrop',
+  'rainbow',
+  'transparent',
 ]
 export const Variant = z.enum(variants)
 export type Variant = z.infer<typeof Variant>
-export type Props = { variant: Variant }
+export type Props = {
+  disclosure: Disclosure
+  variant: Variant
+}

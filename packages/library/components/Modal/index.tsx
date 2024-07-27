@@ -1,46 +1,49 @@
-import { type Disclosure } from 'core/hooks'
+import cn from 'classnames'
+import { useVariants } from 'core/hooks'
 import { IO } from 'fp-ts/IO'
-import { Predicate } from 'fp-ts/Predicate'
-import {
-  FC,
-  PropsWithChildren,
-  useEffect,
-  useRef,
-} from 'react'
+import { useEffect, useRef } from 'react'
+import { ReactFC } from '../../types'
+import { inBounds } from './model'
+import { Variant, type Props } from './schema'
+import classes from './style.module.css'
 
 export type Dialog = HTMLDialogElement & {
   showModal: IO<void>
   close: IO<void>
 }
 
-type targets = (
-  target: HTMLDialogElement | Dialog
-) => Predicate<React.MouseEvent>
-export const targets: targets = (target) => (event) =>
-  event.target === target
-
-type Modal = FC<PropsWithChildren<Disclosure>>
-export const Modal: Modal = ({
-  children,
-  isOpen,
-  onClose,
-}) => {
+export const Modal: ReactFC<Props> = ({ children, disclosure, className, variant }) => {
   let modal = useRef<Dialog>((<></>) as unknown as Dialog)
+  const variants = useVariants(classes, Variant, variant)
   const close = () => {
     modal.current.close()
-    onClose()
+    disclosure.onClose()
+    document.body.style.position = ''
+    document.body.style.overflowY = ''
+  }
+
+  const open = () => {
+    modal.current.showModal()
+    document.body.style.position = 'fixed'
+    document.body.style.overflowY = 'scroll'
+  }
+
+  const clickOffListener = (event: React.MouseEvent) => {
+    var rect = modal.current.getBoundingClientRect()
+    if (!inBounds(rect)(event)) close()
   }
 
   useEffect(
-    () => (isOpen ? modal.current.showModal() : close()),
-    [isOpen]
+    () => (disclosure.isOpen ? open() : close()),
+    [disclosure.isOpen]
   )
 
-  const onClick = (event: React.MouseEvent) =>
-    targets(modal.current)(event) ? close() : null
-
   return (
-    <dialog ref={modal} onClick={onClick}>
+    <dialog
+      ref={modal}
+      className={cn(className, variants)}
+      onClick={clickOffListener}
+    >
       {children}
     </dialog>
   )

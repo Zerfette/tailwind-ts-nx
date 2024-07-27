@@ -1,11 +1,9 @@
 import cn from 'classnames'
-import { FC, PropsWithChildren } from 'react'
+import { ReactFC } from '../../types'
 import classes from './style.module.css'
-import { type Props } from './schema'
 import { Card } from '../Card'
 
-type ButtonGroup = FC<PropsWithChildren<Props>>
-export const ButtonGroup: ButtonGroup = ({
+export const ButtonGroup: ReactFC<{}> = ({
   children,
   className,
 }) => {

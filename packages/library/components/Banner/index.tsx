@@ -1,11 +1,10 @@
 import cn from 'classnames'
 import { useVariants } from 'core/hooks'
-import { FC, PropsWithChildren } from 'react'
+import { ReactFC } from '../../types'
 import { Variant, type Props } from './schema'
 import classes from './style.module.css'
 
-type Banner = FC<PropsWithChildren<Props>>
-export const Banner: Banner = ({
+export const Banner: ReactFC<Props> = ({
   children,
   className,
   variant,

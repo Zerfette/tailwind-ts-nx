@@ -7,21 +7,21 @@
 }
 
 .h2 {
-    @apply text-xl sm:text-3xl font-bold
+    @apply text-2xl sm:text-3xl font-bold
 }
 
 .h3 {
-    @apply text-sm sm:text-2xl font-semibold
+    @apply text-xl sm:text-2xl font-semibold
 }
 
 .h4 {
-    @apply text-sm sm:text-lg font-semibold
+    @apply text-base sm:text-lg font-semibold
 }
 
 .h5 {
-    @apply text-xs sm:text-base font-medium
+    @apply text-sm sm:text-base font-medium
 }
 
 .h6 {
-    @apply text-xs sm:text-base font-medium
+    @apply text-sm sm:text-base font-medium
 }

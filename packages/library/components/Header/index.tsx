@@ -1,11 +1,10 @@
 import cn from 'classnames'
 import { useVariants } from 'core/hooks'
-import { FC, PropsWithChildren } from 'react'
+import { ReactFC } from '../../types'
 import { Variant, type Props } from './schema'
 import classes from './style.module.css'
 
-type Header = FC<PropsWithChildren<Props>>
-export const Header: Header = ({
+export const Header: ReactFC<Props>  = ({
   children,
   className,
   variant,
