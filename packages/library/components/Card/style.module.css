@@ -1,11 +1,11 @@
 .base {
-  @apply overflow-hidden rounded-lg
+  @apply overflow-hidden rounded-lg;
 }
 
 .with-shadow {
-  @apply shadow
+  @apply shadow hover:shadow-md;
 }
 
 .with-outline {
-  @apply border
+  @apply border hover:shadow;
 }

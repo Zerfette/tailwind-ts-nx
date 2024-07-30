@@ -2,20 +2,23 @@ import { Project } from './types'
 
 export const projects: Project[] = [
   {
-    title: 'VanillaJS Drumkit',
-    imgSrc: 'https://fav.farm/🍦',
-    github:
-      'https://github.com/Zerfette/vanillajs-drumkit',
-    website: 'https://drumkit.zerf.dev',
-  },
-  {
+    tags: [''],
     title: 'VanillaJS International Clock',
-    imgSrc: 'https://fav.farm/🍦',
+    imgSrc: 'javascript.svg',
     github:
       'https://github.com/Zerfette/vanillajs-international-clock',
     website: 'https://clock.zerf.dev',
   },
   {
+    tags: [''],
+    title: 'Typescript Sudoku Application',
+    imgSrc: 'typescript.svg',
+    github:
+      'https://github.com/Zerfette/nx-sudoku-multiframework/tree/main/packages/typescript',
+    website: 'https://typescript.zerf.dev',
+  },
+  {
+    tags: [''],
     title: 'React Sudoku Application',
     imgSrc: 'react.svg',
     github:
@@ -23,6 +26,7 @@ export const projects: Project[] = [
     website: 'https://react.zerf.dev',
   },
   {
+    tags: [''],
     title: 'Solid Sudoku Application',
     imgSrc: 'solid.svg',
     github:
@@ -30,6 +34,7 @@ export const projects: Project[] = [
     website: 'https://solid.zerf.dev',
   },
   {
+    tags: [''],
     title: 'Svelte Sudoku Application',
     imgSrc: 'svelte.svg',
     github:
@@ -37,6 +42,7 @@ export const projects: Project[] = [
     website: 'https://svelte.zerf.dev',
   },
   {
+    tags: [''],
     title: 'Vue Sudoku Application',
     imgSrc: 'vue.svg',
     github:

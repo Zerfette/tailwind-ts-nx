@@ -20,13 +20,13 @@ const toProject = ({
   website,
 }: Project) => (
   <li key={title}>
-    <Card variant="with-shadow" className="m-6">
+    <Card variant="with-shadow" className="group m-6" >
       <Divide variant="y">
-        <Center className="flex flex-row-reverse sm:flex-col">
+        <Center className="flex flex-row sm:flex-col">
           <img
             alt={title}
             src={imgSrc}
-            className="m-4 h-8 sm:mx-auto sm:h-24"
+            className="m-4 h-8 sm:mx-auto sm:h-24 group-hover:animate-spin"
           />
           <H level="h3" className="text-center m-4">
             {title}

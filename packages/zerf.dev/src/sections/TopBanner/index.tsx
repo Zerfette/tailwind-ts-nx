@@ -11,7 +11,7 @@ export const TopBanner = () => {
         href="https://github.com/Zerfette/tailwind-ts-nx/tree/main/packages/zerf.dev"
         variant="basic"
       >
-        <Center>
+        <Center className="animate-zoomin">
           <H level="h4" className="mr-2">
             Check out this site on GitHub.
           </H>

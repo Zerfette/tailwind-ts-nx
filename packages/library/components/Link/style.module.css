@@ -1,11 +1,11 @@
 .base {
-  @apply hover:underline
+  @apply hover:underline;
 }
 
 .basic {
-  @apply hover:bg-transparent
+  @apply hover:bg-transparent;
 }
 
 .button {
-  @apply hover:bg-gray-50
+  @apply hover:bg-gray-50;
 }

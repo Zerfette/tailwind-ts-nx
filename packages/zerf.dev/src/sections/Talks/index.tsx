@@ -14,7 +14,7 @@ import { Talk } from './types'
 
 const toTalk = ({ title, description, video }: Talk) => (
   <li key={title}>
-    <Card variant="with-shadow" className="m-6">
+    <Card variant="with-shadow" className="group m-6">
       {video ? (
         <Divide variant="y">
           <Center className="flex-col sm:flex-row p-2">
@@ -30,7 +30,7 @@ const toTalk = ({ title, description, video }: Talk) => (
                 {title}
               </H>
             </Link>
-            <Badge variant="flat" className='m-2"'>
+            <Badge variant="flat" className='group-hover:animate-bounce m-2"'>
               YouTube
             </Badge>
           </Center>
