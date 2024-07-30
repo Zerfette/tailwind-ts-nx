@@ -5,11 +5,12 @@ import { H } from 'library/typography'
 
 export const TopBanner = () => {
   return (
-    <Banner variant="glow" className="h-20">
+    <Banner variant="glow" className="group h-20">
       <Link
         target="_blank"
         href="https://github.com/Zerfette/tailwind-ts-nx/tree/main/packages/zerf.dev"
         variant="basic"
+        className="group-hover:animate-pulse"
       >
         <Center className="animate-zoomin">
           <H level="h4" className="mr-2">

@@ -1,6 +1,5 @@
 import { map } from 'fp-ts/lib/Array'
 import {
-  Badge,
   Center,
   Card,
   Divide,
@@ -14,25 +13,24 @@ import { Talk } from './types'
 
 const toTalk = ({ title, description, video }: Talk) => (
   <li key={title}>
-    <Card variant="with-shadow" className="group m-6">
+    <Card variant="with-shadow" className="m-6">
       {video ? (
         <Divide variant="y">
-          <Center className="flex-col sm:flex-row p-2">
+          <Center className="group flex-col sm:flex-row p-2">
             <Link
               target="_blank"
               href={video}
               variant="basic"
             >
-              <H
-                level="h3"
-                className="text-center m-2"
-              >
+              <H level="h3" className="text-center m-2">
                 {title}
               </H>
             </Link>
-            <Badge variant="flat" className='group-hover:animate-bounce m-2"'>
-              YouTube
-            </Badge>
+            <img
+              alt={title}
+              src="youtube.svg"
+              className="group-hover:animate-bounce m-2 h-8"
+            />
           </Center>
           <P variant="base" className="p-8">
             {description}

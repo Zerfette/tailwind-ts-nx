@@ -15,10 +15,7 @@ const App = () => {
       <div className="animate-fadein p-6 sm:p-12">
         <Header variant="simple">
           <H level="h1">Sarah Renfro</H>
-          <H
-            level="h2"
-            className="my-6 max-w-lg"
-          >
+          <H level="h2" className="my-6 max-w-lg">
             Elevating User Experience with Precision and
             Creativity
           </H>

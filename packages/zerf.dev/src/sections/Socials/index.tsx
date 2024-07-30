@@ -9,16 +9,21 @@ import { map } from 'fp-ts/lib/Array'
 import { socials } from './model'
 import { type Social } from './types'
 
-const toButton = ({ href, title }: Social) => (
+const toButton = ({ href, imgSrc, title }: Social) => (
   <Link
     key={title}
     variant="button"
     target="_blank"
     href={href}
-    className="w-24 sm:w-36"
+    className="group w-1/3 md:w-48"
   >
-    <Center className="p-2 sm:p-4">
-      <H level="h4" className="mr-2">
+    <Center className="p-1 flex-row sm:flex-col">
+      <img
+        alt={title}
+        src={imgSrc}
+        className="size-4 sm:size-8 mt-0 sm:mt-1 mr-1 sm:mr-0 group-hover:scale-110"
+      />
+      <H level="h5" className="mt-0 sm:mt-1">
         {title}
       </H>
     </Center>
@@ -26,7 +31,7 @@ const toButton = ({ href, title }: Social) => (
 )
 
 export const Socials = () => (
-  <ButtonGroup>
+  <ButtonGroup className="w-full md:w-fit">
     <Divide variant="x">{map(toButton)(socials)}</Divide>
   </ButtonGroup>
 )
